@@ -4,14 +4,13 @@
  * @format: String argument passed to _print
  * Return: count
  */
-int _print(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	int count;
 
+	va_list arg;
 	if (format == NULL)
 		return (-1);
-	va_list arg;
-
 	va_start(arg, format);
 	count = 0;
 	while (*format != '\0')

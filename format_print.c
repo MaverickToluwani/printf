@@ -29,7 +29,7 @@ int format_print(char Formatspecifier, va_list arg)
 	else if (Formatspecifier == 'i')
 	{
 		Formatspecifier++;
-		if ((Formatspecifier == 0) && ((Formatspecifier++) != 'x')
+		if ((Formatspecifier == 0) && ((Formatspecifier++) != 'x'))
 			count += digit_print((va_arg(arg, int)), 8);
 		else if ((Formatspecifier == 0) && ((Formatspecifier++) == 'x'))
 			count += digit_print((va_arg(arg, int)), 16);
@@ -41,7 +41,7 @@ int format_print(char Formatspecifier, va_list arg)
 	else if (Formatspecifier == 'p')
 		count += digit_print((va_arg(arg, int)), 10);
 	else if (Formatspecifier == '%')
-		count += write(1, '%', 1);
+		count += write(1, "%", 1);
 	else
 		count += write(1, &Formatspecifier, 1);
 	return (count);
