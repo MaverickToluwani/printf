@@ -1,0 +1,1 @@
+This project is a function that takes in a format string as it's first argument, The format string contains placeholders for various data types and addiitional arguments that corresponds to the place holders. It formats and displays the data according to the format specified in the format string. It is similar to the printf standard library.
