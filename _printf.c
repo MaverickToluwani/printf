@@ -9,6 +9,7 @@ int _printf(const char *format, ...)
 	int count;
 
 	va_list arg;
+
 	if (format == NULL)
 		return (-1);
 	va_start(arg, format);

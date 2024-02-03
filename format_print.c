@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * format_print: check for a format specifer
+ * format_print - check for a format specifer
  * This function handles various format specifiers
  * @Formatspecifier: Format specifier
  * @arg: List of arguments in variadic function
@@ -39,7 +39,7 @@ int format_print(char Formatspecifier, va_list arg)
 	else if (Formatspecifier == 'u')
 		count += digit_print((va_arg(arg, unsigned int)), 10);
 	else if (Formatspecifier == 'p')
-		count += digit_print((va_arg(arg, int)), 10);
+		count += digit_print((va_arg(arg, int)), 16);
 	else if (Formatspecifier == '%')
 		count += write(1, "%", 1);
 	else
